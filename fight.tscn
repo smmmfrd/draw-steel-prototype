@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://General/fight_starter.gd" id="1_wi3sm"]
 [ext_resource type="Script" path="res://Units/Players/player_control.gd" id="2_qb0r4"]
 [ext_resource type="PackedScene" uid="uid://bx5txud5bpx7f" path="res://player.tscn" id="2_rjc2j"]
-[ext_resource type="Script" path="res://Units/Players/player_stats.gd" id="4_8rl8w"]
+[ext_resource type="Script" path="res://Units/Players/player_token.gd" id="4_8rl8w"]
 [ext_resource type="Script" path="res://Units/Enemies/enemy_control.gd" id="4_pktnq"]
-[ext_resource type="Script" path="res://Units/Enemies/enemy_stats.gd" id="7_iawiy"]
+[ext_resource type="Script" path="res://Units/Enemies/enemy_token.gd" id="7_iawiy"]
 
 [node name="Fight" type="Node2D"]
 script = ExtResource("1_wi3sm")
