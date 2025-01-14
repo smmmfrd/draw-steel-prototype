@@ -1,6 +1,6 @@
 # TODO
 
 # Enemy and Player Controllers
-# Free strikes
 # Combat ending logic
+# Free strikes
 # Grid based movement
