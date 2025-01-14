@@ -2,12 +2,14 @@
 class_name Enemy_Control
 extends Node2D
 
+var units : Array[Unit]
+
 func unit_active(active_enemy : Enemy):
 	active_enemy.act()
 	FightManager.finished_turn.emit()
 
 func get_units() -> Array[Unit]:
-	var units : Array[Unit] = []
+	units = []
 	
 	for child in get_children():
 		units.append(Enemy.new(child.my_stats))
@@ -17,8 +19,8 @@ func get_units() -> Array[Unit]:
 func units_alive() -> bool:
 	var all_alive = false
 	
-	for child in get_children():
-		if child.current_hp > 0:
+	for unit in units:
+		if unit.current_hp > 0:
 			all_alive = true
 	
 	return all_alive

@@ -24,6 +24,14 @@ func refresh_line():
 	line = battle.units.duplicate()
 
 func next_turn():
+	if not battle.player_control.units_alive():
+		print("enemies won")
+		return
+	
+	if not battle.enemy_control.units_alive():
+		print("player won")
+		return
+	
 	if line.size() == 0:
 		refresh_line()
 	

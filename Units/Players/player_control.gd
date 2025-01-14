@@ -2,6 +2,7 @@
 class_name Player_Control
 extends Node2D
 
+var units : Array[Unit] 
 var player_turn : bool = false
 var active_unit : Player = null
 
@@ -16,7 +17,7 @@ func unit_active(player_unit : Player):
 	active_unit = player_unit
 
 func get_units() -> Array[Unit]:
-	var units : Array[Unit] = []
+	units = []
 	
 	for child in get_children():
 		units.append(Player.new(child.my_stats))
@@ -27,8 +28,8 @@ func get_units() -> Array[Unit]:
 func units_alive() -> bool:
 	var all_alive = false
 	
-	for child in get_children():
-		if child.current_hp > 0:
+	for unit in units:
+		if unit.current_hp > 0:
 			all_alive = true
 	
 	return all_alive
