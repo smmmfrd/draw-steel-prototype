@@ -1,4 +1,4 @@
 extends Unit
 
-func act() -> void:
+func take_turn() -> void:
 	print(self.name + " is an Enemy!")

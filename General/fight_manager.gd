@@ -1,5 +1,4 @@
 # A global script that manages the battles.
-class_name Fight_Manager
 extends Node2D
 
 var line : Array[Unit]

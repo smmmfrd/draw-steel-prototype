@@ -1,13 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqdlanq4fy7xf"]
+[gd_scene load_steps=6 format=3 uid="uid://dqdlanq4fy7xf"]
 
-[ext_resource type="PackedScene" uid="uid://bd1j13rrc1q5e" path="res://enemy.tscn" id="1_ewbmn"]
-[ext_resource type="Script" path="res://fight_starter.gd" id="1_wi3sm"]
-[ext_resource type="PackedScene" uid="uid://bx5txud5bpx7f" path="res://player.tscn" id="2_rjc2j"]
+[ext_resource type="PackedScene" uid="uid://bd1j13rrc1q5e" path="res://Units/Enemies/enemy.tscn" id="1_ewbmn"]
+[ext_resource type="Script" path="res://General/fight_starter.gd" id="1_wi3sm"]
+[ext_resource type="Script" path="res://Units/Players/player_control.gd" id="2_qb0r4"]
+[ext_resource type="PackedScene" uid="uid://bx5txud5bpx7f" path="res://Units/Players/player.tscn" id="2_rjc2j"]
+[ext_resource type="Script" path="res://Units/Enemies/enemy_control.gd" id="4_pktnq"]
 
 [node name="Fight" type="Node2D" node_paths=PackedStringArray("battle")]
 script = ExtResource("1_wi3sm")
-battle = [NodePath("Player"), NodePath("Enemy")]
+battle = [NodePath("Player Group/Player"), NodePath("Enemy Group/Enemy")]
 
-[node name="Enemy" parent="." instance=ExtResource("1_ewbmn")]
+[node name="Player Group" type="Node2D" parent="."]
+script = ExtResource("2_qb0r4")
 
-[node name="Player" parent="." instance=ExtResource("2_rjc2j")]
+[node name="Player" parent="Player Group" instance=ExtResource("2_rjc2j")]
+
+[node name="Enemy Group" type="Node2D" parent="."]
+script = ExtResource("4_pktnq")
+
+[node name="Enemy" parent="Enemy Group" instance=ExtResource("1_ewbmn")]
