@@ -47,3 +47,13 @@ func next_turn():
 	
 	else:
 		print("Current unit is null.")
+
+func get_players() -> Array[Unit]:
+	var player_units = battle.player_control.units
+	
+	return player_units
+
+func get_enemies() -> Array[Unit]:
+	var enemy_units = battle.enemy_control.units
+	
+	return enemy_units

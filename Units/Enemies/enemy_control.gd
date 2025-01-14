@@ -6,6 +6,9 @@ var units : Array[Unit]
 
 func unit_active(active_enemy : Enemy):
 	active_enemy.act()
+	
+	await get_tree().create_timer(0.1).timeout
+	
 	FightManager.finished_turn.emit()
 
 func get_units() -> Array[Unit]:
