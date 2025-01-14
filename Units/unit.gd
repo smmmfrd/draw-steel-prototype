@@ -1,5 +1,10 @@
 class_name Unit
-extends Node
+extends Resource
+
+var current_hp : int = 0
+
+func _init(starting_hp : int) -> void:
+	current_hp = starting_hp
 
 func act() -> void:
 	take_turn()
