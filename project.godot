@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-FightManager="*res://General/fight_manager.gd"
+Navigation="*res://General/Globals/navigation.gd"
+FightManager="*res://General/Globals/fight_manager.gd"
 
 [input]
 
