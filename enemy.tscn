@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://bd1j13rrc1q5e"]
+[gd_scene load_steps=2 format=3 uid="uid://bd1j13rrc1q5e"]
+
+[ext_resource type="Texture2D" uid="uid://ccr5c7eejeuig" path="res://Assets/Kenney Board Game/skull.png" id="1_y70rg"]
 
 [node name="Enemy" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_y70rg")

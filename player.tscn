@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://bx5txud5bpx7f"]
+[gd_scene load_steps=2 format=3 uid="uid://bx5txud5bpx7f"]
+
+[ext_resource type="Texture2D" uid="uid://dc7hoae4of6q4" path="res://Assets/Kenney Board Game/character.png" id="1_uwbkn"]
 
 [node name="Player" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uwbkn")
